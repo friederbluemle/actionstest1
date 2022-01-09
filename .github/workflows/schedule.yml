@@ -1,14 +1,16 @@
 name: schedule
 on:
   schedule:
-    - cron: "35 * * * *"
+    - cron: "*/5 * * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - run: echo "IS_FORK=$(curl "$GITHUB_API_URL/repos/$GITHUB_REPOSITORY" | jq -r .fork)" >> $GITHUB_ENV
-      - uses: hmarr/debug-action@v2
+      - if: env.IS_FORK == 'false'
+        uses: hmarr/debug-action@v2
+      - if: env.IS_FORK == 'true'
+        run: echo "forked repo!"
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - if: env.IS_FORK == 'false'
-        run: yarn --frozen-lockfile
+      - run: yarn --frozen-lockfile
