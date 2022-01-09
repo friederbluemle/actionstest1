@@ -1,9 +1,9 @@
 # actionstest1
 
-[![dispatch][2]][1]
-[![pr][3]][1]
-[![push][4]][1]
-[![schedule][5]][1]
+[![dispatch][2]][1]\
+[![pr][3]][1]\
+[![push][4]][1]\
+[![schedule][5]][1]\
 [![schedule2][6]][1]
 
 [1]: https://github.com/fbtmp/actionstest1/actions
