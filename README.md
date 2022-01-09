@@ -6,7 +6,7 @@
 [![schedule][5]][1]\
 [![schedule2][6]][1]
 
-[1]: actionstest1/actions
+[1]: /actionstest1/actions
 [2]: https://github.com/fbtmp/actionstest1/workflows/dispatch/badge.svg
 [3]: https://github.com/fbtmp/actionstest1/workflows/pr/badge.svg
 [4]: https://github.com/fbtmp/actionstest1/workflows/push/badge.svg
